@@ -1,0 +1,17 @@
+{
+  "name": "one-dark-pro-for-zed",
+  "version": "0.0.1",
+  "description": "The most installed theme in Visual Studio Code modified for Zed",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Fabricio Pasapera Viera (@Hadez)",
+  "license": "MIT",
+  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7"
+  }
+}
