@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "The most installed theme in Visual Studio Code modified for Zed",
   "scripts": {
+    "test": "echo 'No tests yet!'",
     "prepare": "husky"
   },
   "keywords": [],
