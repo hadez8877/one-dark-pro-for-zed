@@ -17,15 +17,14 @@ One Dark Pro for Zed brings the most popular Visual Studio Code theme to the Zed
    - Consistent UI elements
    - Terminal colors optimization
 
-## Screenshots
-
-### One Dark Pro
-This theme features a carefully curated, vibrant color palette, which primarily aims to improve the readability of the source code.
-
-> [!IMPORTANT]
-> All previews have been moved to [PREVIEWS.md](docs/PREVIEWS.md). If you'd like to see more previews, you can visit the documentation. 
+## Preview
+This theme has been developed with a focus on providing a visually appealing and highly functional coding environment. One of the key elements of this theme is its carefully curated color palette, designed to enhance the overall aesthetic and user experience. 
 
 ![One Dark Pro](assets/previews/one-dark-pro-preview.png)
+
+
+> [!IMPORTANT]
+> The complete collection of previews has been relocated to a dedicated file, which you can find at the following address: [PREVIEWS.md](docs/PREVIEWS.md). This move was made to improve organization and make the previews easier to access.
 
 ## Installation
 
