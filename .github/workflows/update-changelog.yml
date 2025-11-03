@@ -16,7 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1  # Solo el último commit (más rápido)
+          fetch-depth: 1 
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
       
@@ -29,14 +29,12 @@ jobs:
         run: |
           BODY="${{ github.event.release.body }}"
           
-          # Crear contenido temporal en memoria
           {
             echo "$BODY"
             echo ""
             [ -f CHANGELOG.md ] && cat CHANGELOG.md
           } > CHANGELOG.tmp
           
-          # Reemplazar solo si hay diferencias
           if ! cmp -s CHANGELOG.tmp CHANGELOG.md 2>/dev/null; then
             mv CHANGELOG.tmp CHANGELOG.md
             echo "changelog_updated=true" >> $GITHUB_OUTPUT
