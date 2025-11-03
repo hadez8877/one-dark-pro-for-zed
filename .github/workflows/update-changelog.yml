@@ -1,52 +1,54 @@
-name: Update CHANGELOG.md
+name: Sync Changelog on Release
 
 on:
   release:
-    types: [published]  
+    types: [published]
+
+permissions:
+  contents: write
 
 jobs:
   update-changelog:
     runs-on: ubuntu-latest
     name: Update CHANGELOG.md
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
+          fetch-depth: 1  # Solo el último commit (más rápido)
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Configure git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - name: Get release description
-        id: release
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const body = context.payload.release.body || "";
-            return body;
-          result-encoding: string
-
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+      
       - name: Update CHANGELOG.md with the new version 
         run: |
-          BODY="${{ steps.release.outputs.result }}"
-          TEMP_FILE=$(mktemp)
-
-          echo "$BODY" > "$TEMP_FILE"
-          echo "" >> "$TEMP_FILE"
-
-          if [ -f CHANGELOG.md ]; then
-            cat CHANGELOG.md >> "$TEMP_FILE"
+          BODY="${{ github.event.release.body }}"
+          
+          # Crear contenido temporal en memoria
+          {
+            echo "$BODY"
+            echo ""
+            [ -f CHANGELOG.md ] && cat CHANGELOG.md
+          } > CHANGELOG.tmp
+          
+          # Reemplazar solo si hay diferencias
+          if ! cmp -s CHANGELOG.tmp CHANGELOG.md 2>/dev/null; then
+            mv CHANGELOG.tmp CHANGELOG.md
+            echo "changelog_updated=true" >> $GITHUB_OUTPUT
+          else
+            rm -f CHANGELOG.tmp
+            echo "changelog_updated=false" >> $GITHUB_OUTPUT
           fi
-
-          mv "$TEMP_FILE" CHANGELOG.md
-
+        id: update
+      
       - name: Commit and push updated CHANGELOG
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.update.outputs.changelog_updated == 'true'
         run: |
           git add CHANGELOG.md
-          git commit -m "chore: Update from latest release" || echo "No changes to commit"
-          git push origin HEAD:main
+          git commit -m "chore: update CHANGELOG from release ${{ github.event.release.tag_name }}"
+          git push origin main
