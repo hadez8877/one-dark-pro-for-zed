@@ -21,6 +21,6 @@
       ]
     ],
     "subject-empty": [2, "never"],
-    "subject-case": [2, "always", "sentence-case"]
+    "subject-case": [2, "always", "lower-case"]
   }
 }
