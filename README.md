@@ -1,6 +1,6 @@
 ![One Dark Pro Banner](assets/banner.png)
 
-One Dark Pro for Zed brings the most popular Visual Studio Code theme to the Zed editor, offering a carefully crafted dark theme that enhances code readability and reduces eye strain during long coding sessions.
+One Dark Pro Enhanced brings the most popular Visual Studio Code theme to the Zed editor, offering a carefully crafted dark theme that enhances code readability and reduces eye strain during long coding sessions.
 
 ## Features
 
@@ -31,7 +31,7 @@ This theme has been developed with a focus on providing a visually appealing and
 1. Open Zed
 2. Go to Settings (⌘ + ,)
 3. Navigate to Extensions
-4. Search for "One Dark Pro for Zed"
+4. Search for "One Dark Pro Enhanced"
 5. Click Install
 
 ## Usage
