@@ -1,6 +1,6 @@
 id = "one-dark-pro-for-zed-theme"
-name = "One Dark Pro for Zed"
-version = "0.0.11"
+name = "One Dark Pro for Zed Editor"
+version = "0.0.12"
 schema_version = 1
 authors = ["hadez8877"]
 description = "The most installed theme in Visual Studio Code modified for Zed"
