@@ -4,4 +4,4 @@ version = "0.0.12"
 schema_version = 1
 authors = ["hadez8877"]
 description = "The most installed theme in Visual Studio Code modified for Zed"
-repository = "https://github.com/hadez8877/one-dark-pro-for-enhanced"
+repository = "https://github.com/hadez8877/one-dark-pro-enhanced"

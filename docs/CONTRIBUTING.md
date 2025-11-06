@@ -3,7 +3,7 @@ Thank you for considering contributing to the extension! We appreciate your inte
 
 But if you want to contribute in a simpler way, you can start this project from _Stackblitz_ using your GitHub account:
 
-[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/hadez8877/one-dark-pro-enhancedd)
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/hadez8877/one-dark-pro-enhanced)
 ## How to Contribute
 
 ### Reporting Issues
