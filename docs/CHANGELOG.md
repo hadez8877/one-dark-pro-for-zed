@@ -1,3 +1,6 @@
+## 0.0.12 - 2025-11-7
+- The extension publishing bug, caused by the name ending in "Zed," has been resolved. The extension name was changed from `One Dark Pro for Zed` to `One Dark Pro Enhanced`.
+
 ## 0.0.11 - 2025-11-1
 - The error affecting the extension ID has been corrected. The modification consisted of correcting **the incorrect identifier ending. Specifically, the "-zed" ending**, which was incorrectly present in the ID, has been removed.
 
