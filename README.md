@@ -1,5 +1,16 @@
 ![One Dark Pro Banner](assets/banner.png)
 
+<div align="center">
+  
+  [![Zed Extension](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/hadez8877/one-dark-pro-enhanced/main/assets/badge/v0.json)](https://zed.dev/extensions/one-dark-pro-enhanced)
+  [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hadez8877/one-dark-pro-enhanced)
+  [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fhadez8877%2Fone-dark-pro-enhanced%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/hadez8877/one-dark-pro-enhanced/goto?ref=main)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/hadez8877/one-dark-pro-enhanced)
+  ![GitHub issues](https://img.shields.io/github/issues/hadez8877/one-dark-pro-enhanced)
+  ![GitHub PRs](https://img.shields.io/github/issues-pr/hadez8877/one-dark-pro-enhanced)
+  
+</div>
+
 One Dark Pro Enhanced brings the most popular Visual Studio Code theme to the Zed editor, offering a carefully crafted dark theme that enhances code readability and reduces eye strain during long coding sessions.
 
 ## Features
